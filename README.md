@@ -16,4 +16,4 @@
     - python3 -m bot
     
 ## Deploy To Herokku ❤️
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Avengers105/YouTube-Downloader/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kannan5678900/YouTube-Downloader/tree/master)
