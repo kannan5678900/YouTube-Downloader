@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from pyrogram import Client, filters 
-from pyrogram.types StopPropagation, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import StopPropagation, InlineKeyboardButton, InlineKeyboardMarkup
 import yt_dlp
 from utils.util import humanbytes
 import asyncio
