@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 from pyrogram import Client, StopPropagation, filters 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import yt_dlp
-import youtube_dl
 from utils.util import humanbytes
 import asyncio
 
@@ -23,7 +22,7 @@ def create_buttons(quailitylist):
 
 # extract Youtube info
 def extractYt(yturl):
-    ydl = youtube_dl.YoutubeDL()
+    ydl = yt_dlp.YoutubeDL()
     with ydl:
         qualityList = []
         r = ydl.extract_info(yturl, download=False)
@@ -35,22 +34,6 @@ def extractYt(yturl):
                  "yturl": yturl})
 
         return r['title'], r['thumbnail'], qualityList
-
-
-#  Need to work on progress
-
-# def downloadyt(url, fmid, custom_progress):
-#     ydl_opts = {
-#         'format': f"{fmid}+bestaudio",
-#         "outtmpl": "test+.%(ext)s",
-#         'noplaylist': True,
-#         'progress_hooks': [custom_progress],
-#     }
-#     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-#         ydl.download([url])
-
-
-# https://github.com/SpEcHiDe/AnyDLBot
 
 async def downloadvideocli(command_to_exec):
     process = await asyncio.create_subprocess_exec(
