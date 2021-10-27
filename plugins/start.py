@@ -1,6 +1,13 @@
 from pyrogram import Client, filters, StopPropagation
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+PHOTO = [
+    "https://telegra.ph/file/0a37f338a47ab2a909997.jpg",
+    "https://telegra.ph/file/9be92d8a94f53bf6d6192.jpg",
+    "https://telegra.ph/file/1c4dc6991b182c4af1512.jpg",
+    "https://telegra.ph/file/400882986bb62bab8940d.jpg"
+]
+
 @Client.on_message(filters.command(["start"]), group=-2)
 async def start(client, message):
     # return
