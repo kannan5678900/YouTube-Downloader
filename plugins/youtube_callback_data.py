@@ -79,7 +79,7 @@ async def catch_youtube_dldata(c, q):
     # await q.edit_message_reply_markup([[InlineKeyboardButton("Processing..")]])
 
     audio_command = [
-        "youtube-dl",
+        "yt-dlp",
         "-c",
         "--prefer-ffmpeg",
         "--extract-audio",
@@ -91,7 +91,7 @@ async def catch_youtube_dldata(c, q):
     ]
 
     video_command = [
-        "youtube-dl",
+        "yt-dlp",
         "-c",
         "--embed-subs",
         "-f", f"{format_id}+bestaudio",
