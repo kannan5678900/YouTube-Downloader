@@ -23,6 +23,5 @@ async def start(client, message):
         caption=welcomed,
         reply_markup=joinButton,
         parse_mode="html",
-        quote=True
 )
     raise StopPropagation
